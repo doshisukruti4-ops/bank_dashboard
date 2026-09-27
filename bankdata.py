@@ -20,7 +20,6 @@ print(df.columns)
 print("\n--- DATA TYPE OF ALL COLUMNS ---")
 print(df.dtypes)
 
-
 #filling missing values
 df = df.fillna(0)
 
@@ -31,12 +30,6 @@ df = df.drop_duplicates()
 df["card_type"] = df["card_type"].str.strip().str.upper()
 df["geography"] = df["geography"].str.strip().str.upper()
 df["gender"] = df["gender"].str.strip().str.upper()
-
-
-# =================================---------
-# 4. MATH & STATS (mean / average)
-# =================================---------
-# Note: In Python/Pandas, 'mean' and 'average' are the exact same calculation.
 
 # Calculate the mean (average) of Credit Score
 avg_credit = df["creditscore"].mean()
